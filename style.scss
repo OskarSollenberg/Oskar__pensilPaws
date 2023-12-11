@@ -1,27 +1,17 @@
 /* Importing reset. Doing this so that it can be in another file (less messy) */
-@import "reset.css";
+@import "/style-components/_reset";
+@import "/style-components/_root";
 
-:root {
-    /*Colours*/
-    --green: #397c40;
-    --blue: #060846;
-    --red: #ee0044;
-    --lightBlue: #33b0db;
-    --mustardYellow: #faa714;
-    --goldYellow: #f7c061;
-    --whiteCream: #eeead7;
-
-    /*Fonts*/
-    --CursiveMain: "Patrick Hand SC", cursive;
-    --Cursive: "Delicious Handrawn", cursive;
-    --Roboto: "Roboto Flex", sans-serif;
-}
+/* ----------------------------------------------- */
+/* GLOBAL */
 body {
     font-family: var(--CursiveMain);
     background: url(Assets/Images/bg-pancils.jpg);
     color: rgb(84, 42, 42);
 }
+
 /* ----------------------------------------------- */
+/* GLOBAL WRAPPERS */
 .site-wrapper {
     display: flex;
     flex-direction: column;
@@ -37,6 +27,7 @@ body {
 }
 
 /* ----------------------------------------------- */
+/* PAGE/PAGE-text STYLING */
 .page {
     display: none;
     flex-direction: column;
@@ -50,16 +41,19 @@ body {
     background-color: var(--mustardYellow);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 25px,
         rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+    @media (max-width: 60rem) {
+        border-radius: 0rem;
+        max-width: 50rem;
+        width: 90vw;
+    }
 }
 .page-information {
-    text-align: center;
     font-size: 1.5rem;
-}
-.page-information--lg {
-    font-size: 3rem;
 }
 
 /* ----------------------------------------------- */
+/* BUTTON */
 .btn {
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
@@ -69,22 +63,26 @@ body {
     background-color: var(--whiteCream);
     color: var(--green);
     box-shadow: inset 0 0 0 0 var(--green);
+    min-width: 8rem;
 
     -webkit-transition: ease-out 0.6s;
     -moz-transition: ease-out 0.6s;
     transition: ease-out 0.6s;
 }
-
 .btn:hover {
     box-shadow: inset 400px 0 0 0 var(--green);
     color: var(--whiteCream);
 }
+
+/* ----------------------------------------------- */
+/* LOADER IMAGE */
 .loader {
     width: 3rem;
     display: none;
 }
 
 /* ----------------------------------------------- */
+/* CANVAS */
 .canvas {
     border: 1px solid black;
     background: white;
@@ -94,6 +92,7 @@ body {
 }
 
 /* ----------------------------------------------- */
+/* INPUT */
 .input__content {
     display: flex;
     flex-direction: column;
@@ -109,6 +108,7 @@ body {
 }
 
 /* ----------------------------------------------- */
+/* WIN & LOSE conditions */
 .conditions {
     display: none;
     flex-direction: column;
@@ -118,25 +118,39 @@ body {
 }
 
 /* ----------------------------------------------- */
+/* GALLERY */
 .section-gallery {
-    width: 100vw;
+    width: 90vw;
     background-color: var(--mustardYellow);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 2rem;
+
+    @media (max-width: 60rem) {
+        border-radius: 0rem;
+    }
 }
 .gallery-grid-wrapper {
     display: grid;
     align-items: center;
+    text-align: left;
     justify-content: center;
+    width: 100vw;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    width: 100vw;
-    max-width: 70rem;
-    min-height: 500px;
+    max-width: 64rem;
+    min-height: 31.25rem;
     border-radius: 2rem;
+
+    @media (max-width: 60rem) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 40rem) {
+        grid-template-columns: 1fr;
+    }
 }
 .gallery-grid-items {
     padding: 2rem;
@@ -144,21 +158,54 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 60rem) {
+        padding: 1rem;
+    }
+    @media (max-width: 40rem) {
+        padding: 0rem;
+    }
 }
 .gallery-grid-items img {
     background: white;
-    width: 250px;
-    height: 150px;
+    border: 0.5rem rgb(84, 42, 42);
+    width: 16rem;
+    height: 9.5rem;
+    max-width: 200px;
+    border-style: solid;
+    border-width: 10px;
+    border-top-color: lighten(#000, 20%);
+    border-right-color: lighten(#000, 0%);
+    border-bottom-color: lighten(#000, 20%);
+    border-left-color: lighten(#000, 0%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* ----------------------------------------------- */
-/* @MEDIA */
-@media (max-width: 60rem) {
-    .page {
-        border-radius: 0rem;
-        max-width: 50rem;
-        width: 90vw;
-    }
+/* FOOTERS */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: white;
+}
+.footer__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+.footer__list-item {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.footer__soc-icons {
+    width: 1rem;
 }
 
 /* ----------------------------------------------- */
@@ -169,14 +216,19 @@ body {
 .page--content-positioning {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-@media (max-width: 60rem) {
-    .page--content-positioning {
+
+    @media (max-width: 60rem) {
         display: flex;
         justify-content: center;
         align-items: center;
         grid-template-columns: 1fr 1fr;
     }
+}
+.page-information--lg {
+    font-size: 3rem;
+}
+.page-information--xl {
+    font-size: 3.5rem;
 }
 .input__content--hidden {
     display: none;
