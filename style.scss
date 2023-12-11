@@ -7,7 +7,7 @@
 body {
     font-family: var(--CursiveMain);
     background: url(Assets/Images/bg-pancils.jpg);
-    color: rgb(84, 42, 42);
+    color: var(--brown);
 }
 
 /* ----------------------------------------------- */
@@ -133,6 +133,9 @@ body {
         border-radius: 0rem;
     }
 }
+.section__title {
+    font-size: 3rem;
+}
 .gallery-grid-wrapper {
     display: grid;
     align-items: center;
@@ -168,7 +171,7 @@ body {
 }
 .gallery-grid-items img {
     background: white;
-    border: 0.5rem rgb(84, 42, 42);
+    border: 0.5rem var(--brown);
     width: 16rem;
     height: 9.5rem;
     max-width: 200px;
@@ -178,7 +181,7 @@ body {
     border-right-color: lighten(#000, 0%);
     border-bottom-color: lighten(#000, 20%);
     border-left-color: lighten(#000, 0%);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 4px var(--brown);
 }
 
 /* ----------------------------------------------- */
