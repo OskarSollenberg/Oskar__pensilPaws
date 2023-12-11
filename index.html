@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+            rel="stylesheet"
+        />
+        <title>Guess The Drawing</title>
+    </head>
+    <body>
+        <div class="site-wrapper">
+            <main class="main">
+                <h1 class="main__title">Guess The Drawing</h1>
+
+                <div class="page" id="welcomePage">
+                    <p class="page-information page-information--lg">
+                        Welcome to "Draw the Animal"
+                    </p>
+                    <p class="page-information">
+                        This game is about guessing what animal the other player
+                        has drawn.
+                    </p>
+                    <button class="btn btn__next-page">Start</button>
+                </div>
+
+                <div class="page" id="instructionsPage">
+                    <p class="page-information page-information--lg">
+                        Player 2 look away
+                    </p>
+                    <p class="page-information">
+                        We will now give player 1 the Animal they should draw
+                    </p>
+                    <button class="btn btn__next-page">Next</button>
+                </div>
+
+                <div class="page" id="animalPage">
+                    <div class="loader loader--visible">
+                        <img src="Assets/Images/dog-loader.gif" alt="" />
+                    </div>
+                    <p class="page-information" id="random-animal"></p>
+                    <button class="btn btn__next-page">Start Drawing</button>
+                </div>
+
+                <div class="page" id="gamePage">
+                    <p class="page-information">Player 1, draw the img</p>
+                    <canvas
+                        class="canvas"
+                        id="canvas"
+                        width="400"
+                        height="230"
+                    ></canvas>
+                    <p id="counter"></p>
+                </div>
+
+                <div class="page" id="inputPage">
+                    <div class="input__grid-row">
+                        <p class="page-information">What a nice drawing</p>
+                        <img class="canvas-img" id="userGuesscanvas" src="#" />
+                    </div>
+
+                    <div class="input__grid-row">
+                        <form class="input__content" onsubmit="return false">
+                            <p class="page-information">
+                                Player 2, guess the animal
+                            </p>
+                            <input class="input" type="text" name="lname" />
+                            <input
+                                class="btn btn__submit-guess"
+                                type="submit"
+                                value="Submit"
+                            />
+                        </form>
+                        <div class="input__grid-row conditions">
+                            <p
+                                class="page-information--lg condition__status"
+                            ></p>
+                            <p class="page-information condition__message"></p>
+                            <button class="btn btn__play-again">
+                                Play Again
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <section class="section-gallery">
+                <h2 class="section__title">Gallery</h2>
+                <div class="gallery-grid-wrapper"></div>
+            </section>
+        </div>
+        <script src="script.js" type="module"></script>
+    </body>
+</html>
