@@ -1,7 +1,3 @@
-let isDrawing = false;
-let lastXPos = 0;
-let lastYPos = 0;
-
 // Canvas
 const canvasEl = document.querySelector("#canvas"); // Canvas element
 const context = canvasEl.getContext("2d"); // The content within the canvas
@@ -14,6 +10,10 @@ export function getImageUrl() {
 
 // function that initializes the canvas
 export function initCanvas() {
+    let isDrawing = false;
+    let lastXPos = 0;
+    let lastYPos = 0;
+
     // function that fixes the canvas scaling
     function fixCanvasScaling() {
         context.scale(devicePixelRatio, devicePixelRatio);
