@@ -1,8 +1,5 @@
 {
-  "dependencies": {
-    "parcel": "^2.10.3"
-  },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.10.3"
+    "@parcel/resolver-default": "^2.10.3"
   }
 }
