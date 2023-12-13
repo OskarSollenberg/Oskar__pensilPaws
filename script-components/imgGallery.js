@@ -1,12 +1,15 @@
+//description: This file contains the functions that save the canvas image to local storage and render the image gallery
+
 let galleryItemList = [];
 let objectInfo = {
     url: "",
     animal: "",
 };
 
+// function that saves the canvas image to local storage
 export function saveCanvasToLocalStorage() {
     let canvasEl = document.querySelector("#canvas");
-    let animal = document.querySelector("#random-animal").textContent;
+    let animal = document.querySelector("#randomAnimal").textContent;
     let currentCanvasUrl = canvasEl.toDataURL("image/png");
 
     objectInfo.url = currentCanvasUrl;
@@ -16,6 +19,7 @@ export function saveCanvasToLocalStorage() {
     localStorage.setItem("galleryItemList", JSON.stringify(galleryItemList));
 }
 
+// function that renders the image gallery
 export function initImgGallery() {
     function checkForPrevSavedCanvasImages() {
         if (localStorage.getItem("galleryItemList")) {
@@ -24,6 +28,7 @@ export function initImgGallery() {
             );
         }
     }
+    // function that renders the image gallery
     function renderImgGallery() {
         const galleryWrapper = document.querySelector(".gallery-grid-wrapper");
         galleryWrapper.innerHTML = "";
@@ -40,10 +45,12 @@ export function initImgGallery() {
             galleryContentWrapper.appendChild(galleryText);
         }
     }
+    // function calls
     checkForPrevSavedCanvasImages();
     renderImgGallery();
 }
 
+// function that displays the canvas image on the input page
 export function displayCanvasImg() {
     let userGuesscanvas = document.querySelector("#userGuesscanvas");
     galleryItemList = JSON.parse(localStorage.getItem("galleryItemList"));

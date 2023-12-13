@@ -21,6 +21,7 @@
             <main class="main">
                 <h1 class="main__title">Guess The Drawing</h1>
 
+                <!-- PAGE 1 ------------------------------------------>
                 <div class="page" id="welcomePage">
                     <p class="page-information page-information--lg">
                         Welcome to "Draw the Animal"
@@ -32,6 +33,7 @@
                     <button class="btn btn__next-page">Start</button>
                 </div>
 
+                <!-- PAGE 2 ------------------------------------------>
                 <div class="page" id="instructionsPage">
                     <p class="page-information page-information--lg">
                         Player 2 look away
@@ -42,17 +44,19 @@
                     <button class="btn btn__next-page">Next</button>
                 </div>
 
+                <!-- PAGE 3 ------------------------------------------>
                 <div class="page" id="animalPage">
                     <div class="loader loader--visible">
                         <img src="Assets/Images/dog-loader.gif" alt="" />
                     </div>
                     <p
                         class="page-information page-information--xl"
-                        id="random-animal"
+                        id="randomAnimal"
                     ></p>
                     <button class="btn btn__next-page">Start Drawing</button>
                 </div>
 
+                <!-- PAGE 4 ------------------------------------------>
                 <div class="page" id="gamePage">
                     <p class="page-information">Player 1, draw the img</p>
                     <canvas
@@ -64,6 +68,7 @@
                     <p id="counter"></p>
                 </div>
 
+                <!-- PAGE 5 ------------------------------------------>
                 <div class="page" id="inputPage">
                     <div class="input__grid-row">
                         <p class="page-information">What a nice drawing</p>
@@ -82,6 +87,8 @@
                                 value="Submit"
                             />
                         </form>
+
+                        <!-- Displayed after guess been made -->
                         <div class="input__grid-row conditions">
                             <p
                                 class="page-information--lg condition__status"
@@ -94,6 +101,8 @@
                     </div>
                 </div>
             </main>
+
+            <!-- GALLERY ------------------------------------------>
             <section class="section-gallery">
                 <h2 class="section__title">Gallery</h2>
                 <div class="gallery-grid-wrapper"></div>

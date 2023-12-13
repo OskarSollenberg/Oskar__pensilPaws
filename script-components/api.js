@@ -1,5 +1,6 @@
-// This function fetches a random animal name from the API
+// description: This file contains the functions that fetch data from the API
 
+// This function fetches a random animal name from the API
 export async function fetchRandomAnimal() {
     const url = "https://animal-name-api.onrender.com/random-animal";
     try {
@@ -12,7 +13,7 @@ export async function fetchRandomAnimal() {
     }
 }
 export async function loadAnimal() {
-    const animalWordEl = document.querySelector("#random-animal");
+    const animalWordEl = document.querySelector("#randomAnimal");
     const loader = document.querySelector(".loader");
     const animal = await fetchRandomAnimal();
     animalWordEl.textContent = animal;

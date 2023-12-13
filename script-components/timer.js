@@ -1,3 +1,6 @@
+//description: This file contains functions that are responsible for timer functionality
+
+// function that Initializes timer counting the seconds user have left to draw
 export function initTimer(callback) {
     const counter = document.querySelector("#counter");
     let secondsLeftToDraw = 2;

@@ -17,13 +17,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: var(--gap-xl);
 }
 .main {
     text-align: center;
 }
 .main__title {
-    font-size: 3rem;
+    font-size: var(--fs-l);
 }
 
 /* ----------------------------------------------- */
@@ -33,11 +33,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--gap-m);
     height: 40rem;
     width: 50rem;
-    border-radius: 2rem;
-    padding: 2rem;
+    border-radius: var(--br-m);
+    padding: var(--pad-l);
     background-color: var(--mustardYellow);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 25px,
         rgba(0, 0, 0, 0.05) 0px 5px 10px;
@@ -49,16 +49,16 @@ body {
     }
 }
 .page-information {
-    font-size: 1.5rem;
+    font-size: var(--fs-s);
 }
 
 /* ----------------------------------------------- */
 /* BUTTON */
 .btn {
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+    padding: var(--pad-s) var(--pad-m);
+    font-size: var(--fs-s);
     border: 3px solid var(--green);
-    border-radius: 0.5rem;
+    border-radius: var(--br-s);
     cursor: pointer;
     background-color: var(--whiteCream);
     color: var(--green);
@@ -70,7 +70,7 @@ body {
     transition: ease-out 0.6s;
 }
 .btn:hover {
-    box-shadow: inset 400px 0 0 0 var(--green);
+    box-shadow: inset 25rem 0 0 0 var(--green);
     color: var(--whiteCream);
 }
 
@@ -85,10 +85,10 @@ body {
 /* CANVAS */
 .canvas {
     border: 1px solid black;
-    background: white;
+    background: var(--white);
 }
 .canvas-img {
-    background: white;
+    background: var(--white);
 }
 
 /* ----------------------------------------------- */
@@ -96,7 +96,7 @@ body {
 .input__content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--gap-m);
 }
 .input__grid-row {
     width: 100%;
@@ -114,7 +114,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: var(--gap-m);
 }
 
 /* ----------------------------------------------- */
@@ -127,14 +127,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 2rem;
+    border-radius: var(--br-m);
 
     @media (max-width: 60rem) {
         border-radius: 0rem;
     }
 }
 .section__title {
-    font-size: 3rem;
+    font-size: var(--fs-l);
 }
 .gallery-grid-wrapper {
     display: grid;
@@ -143,10 +143,10 @@ body {
     justify-content: center;
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: var(--gap-m);
     max-width: 64rem;
     min-height: 31.25rem;
-    border-radius: 2rem;
+    border-radius: var(--br-m);
 
     @media (max-width: 60rem) {
         grid-template-columns: 1fr 1fr;
@@ -156,14 +156,14 @@ body {
     }
 }
 .gallery-grid-items {
-    padding: 2rem;
+    padding: var(--pad-l);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     @media (max-width: 60rem) {
-        padding: 1rem;
+        padding: var(--pad-m);
     }
     @media (max-width: 40rem) {
         padding: 0rem;
@@ -174,9 +174,9 @@ body {
     border: 0.5rem var(--brown);
     width: 16rem;
     height: 9.5rem;
-    max-width: 200px;
+    max-width: 12.5rem;
     border-style: solid;
-    border-width: 10px;
+    border-width: 1rem;
     border-top-color: lighten(#000, 20%);
     border-right-color: lighten(#000, 0%);
     border-bottom-color: lighten(#000, 20%);
@@ -191,7 +191,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    background: white;
+    background: var(--white);
 }
 .footer__list {
     display: flex;
@@ -201,11 +201,11 @@ body {
     align-items: center;
 }
 .footer__list-item {
-    padding: 2rem;
+    padding: var(--pad-l);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--gap-s);
 }
 .footer__soc-icons {
     width: 1rem;
@@ -228,10 +228,10 @@ body {
     }
 }
 .page-information--lg {
-    font-size: 3rem;
+    font-size: var(--fs-l);
 }
 .page-information--xl {
-    font-size: 3.5rem;
+    font-size: var(--fs-xxl);
 }
 .input__content--hidden {
     display: none;
