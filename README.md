@@ -29,17 +29,6 @@ Hi, This is a beginner project myself together with a team created at Hyper Isla
 <br />
 <br />
 
-
-
-
-- Use fundamental Javascript concepts such as variables,loops, functions, objects and arrays
-- Use the DOM API to query, modify and create elements
-- Use event listeners to add interactivity
-- Use the Web Storage API to persist data
-- Use the Fetch API to get data from a 3rd party
-
-  
-
 ---
 
 
@@ -115,16 +104,6 @@ function setPage(pageId) {
 - Using a structure that makes it very easy to add new information or remove information. Each page is induvidualy rendered in javascript making it very easy to hide all page-elements in a page when it shouldn't be visable. This structure also makes it very easy to add another page if required, all you need is to render page in js and add the reusable clasnames in html to make it fit the style of the website.
 <img width="835" alt="Screenshot 2023-12-13 at 13 05 33" src="https://github.com/OskarSollenberg/Oskar__pensilPaws/assets/122973984/0202e536-8181-4e62-a548-7e6c4e5dc3ff">
 
-
-### More notes for assesment:
-- Keping the variables within the belonging function making it more readable, scalable, and flexible. 
-- Quickly mention tyling and html, using root-varibales, css following the flow of html for readability.
-- Follow this structure for js
-    - Variables 
-    - Main logic
-    - Dom updates / functions that changes html? 
-    - Eventlisteners
-    - Initial redering / setup
  
 
 
