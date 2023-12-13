@@ -14,8 +14,6 @@ Hi, This is a beginner project myself together with a team created at Hyper Isla
 
 
 
-
-
 ### Languages and Tools:
 
 
@@ -29,6 +27,18 @@ Hi, This is a beginner project myself together with a team created at Hyper Isla
 <img align="left" alt="Visual Studio Code" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" style="padding-right:10px;" />
 
 <br />
+<br />
+
+
+
+
+- Use fundamental Javascript concepts such as variables,loops, functions, objects and arrays
+- Use the DOM API to query, modify and create elements
+- Use event listeners to add interactivity
+- Use the Web Storage API to persist data
+- Use the Fetch API to get data from a 3rd party
+
+  
 
 ---
 
@@ -67,7 +77,6 @@ function renderInstructionsPage() {
 function renderRandAnimalPage() {
 }
 function renderGamePage() {
-}
 }
 function renderInputPage() {
 }
@@ -108,6 +117,8 @@ function setPage(pageId) {
 
 
 ### More notes for assesment:
+- Keping the variables within the belonging function making it more readable, scalable, and flexible. 
+- Quickly mention tyling and html, using root-varibales, css following the flow of html for readability.
 - Follow this structure for js
     - Variables 
     - Main logic
@@ -115,9 +126,7 @@ function setPage(pageId) {
     - Eventlisteners
     - Initial redering / setup
  
-    - Keping the variables within the belonging function making it more readable, scalable, and flexible. 
-    - Quickly mention tyling and html, using root-varibales, css following the flow of html for readability.
- 
+
 
 
 
