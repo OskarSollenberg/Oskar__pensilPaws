@@ -3,7 +3,7 @@
 // function that Initializes timer counting the seconds user have left to draw
 export function initTimer(callback) {
     const counter = document.querySelector("#counter");
-    let secondsLeftToDraw = 2;
+    let secondsLeftToDraw = 30;
     counter.textContent = secondsLeftToDraw;
 
     function startTimer() {
