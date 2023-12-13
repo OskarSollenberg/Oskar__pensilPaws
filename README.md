@@ -86,11 +86,11 @@ import * as answer from "./script-components/conditions.js";
 
 - Staing consistant with bem-naming convention for all html classes as well as using camel-case for id, making it consistant with the naming in javascript (I dont use id's for styling). 
 ```html
- <div class="page" id="welcomePage">
-        <p class="page-information page-information--lg"></p>
-        <p class="page-information"></p>
-        <button class="btn btn__next-page"></button>
-    </div>
+<div class="page" id="welcomePage">
+    <p class="page-information page-information--lg"></p>
+    <p class="page-information"></p>
+    <button class="btn btn__next-page"></button>
+</div>
 ```
 
 - Finding usecases for querySelectorAll to make the code DRY'er letting you select elements from an Array instead of induvidualy selecting them.
@@ -101,6 +101,11 @@ function setPage(pageId) {
         page.classList.remove("page--visible");
     }
 ```
+- Using a clear structure in HTML, reusing alot of classnames for same styling making it very easy to re-syle.
+- Using a structure that makes it very easy to add new information or remove information. Each page is induvidualy rendered in javascript making it very easy to hide all page-elements in a page when it shouldn't be visable. This structure also makes it very easy to add another page if required, all you need is to render page in js and add the reusable clasnames in html to make it fit the style of the website.
+<img width="835" alt="Screenshot 2023-12-13 at 13 05 33" src="https://github.com/OskarSollenberg/Oskar__pensilPaws/assets/122973984/0202e536-8181-4e62-a548-7e6c4e5dc3ff">
+
+
 
 **💬 ask me about anything, i am happy to help**
 
