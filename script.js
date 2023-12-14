@@ -100,14 +100,15 @@ function renderInputPage() {
             userInput.value = "";
         }
     });
+
+    const playAgainBtn = document.querySelector(".btn__play-again");
+    playAgainBtn.addEventListener("click", function () {
+        location.reload();
+    });
 }
 
 // The play again button is clicked
-const playAgainBtn = document.querySelector(".btn__play-again");
-playAgainBtn.addEventListener("click", function () {
-    location.reload();
-});
 
 // Initial rendering // The page is loaded
-renderWelcomePage();
+setPage("welcomePage");
 imgGallery.initImgGallery();
